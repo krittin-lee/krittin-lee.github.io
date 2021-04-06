@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -9,7 +10,12 @@
       <h1>¡Nope!</h1>
       <h2>Comming Soon!</h2>
       <img src="https://i.ibb.co/QMgRGWG/Untitled-Artwork-2.gif" alt="Yellow bouncy boi">
-      <h3><a href="https://krittin-lee.github.io">< Back</a></h3>
+      <h3><a class="back" href="https://krittin-lee.github.io">< Back</a></h3>
+    </div>
+
+    <div class="foot">
+      <p class="desktop">© 2021 Krittin Leewanich. All rights reserved.</p>
+      <p class="mobile">© 2021 Krittin Leewanich.<br>All rights reserved.</p>
     </div>
   </body>
 
@@ -31,11 +37,11 @@
   h2 {
     font-size:30px;
   }
-  a {
+  .back {
     font-size:30px;
   }
   .nope {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.4);
     margin-left: 33%;
     margin-right: 33%;
   }
@@ -44,6 +50,20 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
+  }
+  .mobile {
+    display: none;
+  }
+  .foot {
+    color: white;
+  }
+  @media screen and (max-width: 615px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
   }
   </style>
 </html>
