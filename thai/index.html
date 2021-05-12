@@ -28,44 +28,70 @@
   </body>
 
   <style>
-    body {
-      background-image: url('https://i.ibb.co/Ld1QGV3/bgg.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
+    html {
+      height: 100%;
+    }
+      body {
+        background-image: url('https://i.ibb.co/Ld1QGV3/bgg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        }
+      .header {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 1%;
+        margin-left: inherit;
       }
-    .header {
-      padding-left: 10%;
-      padding-right: 10%;
-      padding-top: 1%;
-      margin-left: inherit;
-    }
-    h1 {
-      text-align: left;
-      color: #000;
-      font-size: 55px;
-      text-shadow: 2px 2px #fff;
-      margin-bottom: 5px;
-      font-family: 'KoHo', sans-serif;
-    }
-    h2 {
-      text-align: left;
-      color: #fff;
-      font-size: 45px;
-      font-family: 'KoHo', sans-serif;
-      text-shadow: 2px 2px #000;
-    }
-    .link {
-      color: #fff;
-      font-size: 25px;
-      text-shadow: 1px 1px #000;
-    }
-    .list {
-      margin-top: -30px;
-    }
-    .thai {
-
-    }
-      </style>
-</html>
+      h1 {
+        text-align: left;
+        color: #000;
+        font-size: 55px;
+        text-shadow: 2px 2px #fff;
+        margin-bottom: 5px;
+        font-family: 'KoHo', sans-serif; 
+      }
+      h2 {
+        text-align: left;
+        color: #fff;
+        font-size: 45px;
+        font-family: 'KoHo', sans-serif;
+        text-shadow: 2px 2px #000;
+      }
+      .link {
+        color: #fff;
+        font-size: 25px;
+        text-shadow: 1px 1px #000;
+      }
+      .list {
+        margin-top: -30px;
+      }
+      @media screen and (max-width: 615px) {
+        .header {
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+        h1 {
+          text-align: left;
+          color: #000;
+          font-size: 50px;
+          text-shadow: 2px 2px #fff;
+          margin-bottom: 5px;
+          font-family: 'KoHo', sans-serif;
+        }
+        h2 {
+          text-align: left;
+          color: #fff;
+          font-size: 40px;
+          font-family: 'KoHo', sans-serif;
+          text-shadow: 2px 2px #000;
+        }
+        .link {
+          color: #fff;
+          font-size: 20px;
+          text-shadow: 1px 1px #000;
+        }
+      }
+        </style>
+  </html>
