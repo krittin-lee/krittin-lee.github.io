@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Krittin Leewanich</title>
+    <link rel="shortcut icon" type="image/jpg" href="cat.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Caveat&family=Srisakdi&family=Chakra+Petch&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrap">
+      <button onclick="myFunction()">A/ก</button>
+      <div class="top">
+        <h2 id="hello" class="hello">HELLO</h2>
+        <h3 id="my" class="my">My name is</h3>
+      </div>
+      <h1 id="name" class="name">Krittin<br>Leewanich</h1>
+      <div class="bottom">
+        <ul>
+          <li> <a href="https://twitter.com/krittin_lee"><img src="twitter.png" alt="Twitter"></a></li>
+          <li> <a href="https://www.instagram.com/audi_pipip/"><img src="ig.png" alt="Instragram"></a></li>
+          <li> <a href="https://krittin-lee.medium.com"><img src="med.png" alt="Medium"></a></li>
+          <li> <a href="https://soundcloud.com/kri_ttt"><img src="sc.png" alt="Medium"></a></li>
+          <li> <a href=mailto:krittin.audi@gmail.com > <img src="email.png" alt="Medium"></a></li>
+        </ul>
+        <h6 class="desktop">Vertion 1.2</h6>
+      </div>
+
+      <a class="next"href="#">Who am I →</a>
+
+    </div>
+
+  </body>
+
+  <style>
+    body {
+      background-color: #cde8ae;
+      font-family: 'Baloo 2', 'Chakra Petch', sans-serif;
+      text-align: center;
+      }
+      .wrap {
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+    .top {
+      background-color: #ffd712;
+    }
+    .hello {
+      font-size: 40px;
+    }
+    .my{
+      margin-top: -40px;
+      margin-bottom: 0px;
+      }
+    .name {
+      font-size: 90px;
+      font-family: 'Caveat', 'Srisakdi', serif;
+      background-color: #fff;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .bottom {
+      background-color: #ffd712;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      text-align: left;
+    }
+    li {
+    display: inline;
+    padding-right: 8px;
+    }
+    img {
+      width:34px;
+      height:34px;
+    }
+    h6 {
+      text-align: right;
+      margin-top: -50px;
+      padding-bottom: 0px;
+      padding-bottom: 0px;
+      padding-right: 10px;
+    }
+    .desktop {
+      visibility: visible;
+    }
+    .mobile {
+      visibility: hidden;
+    }
+    @media screen and (max-width: 835px) {
+      .wrap {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      .hello {
+        font-size: 30px;
+      }
+      .name {
+        font-size: 60px;
+        font-family: 'Caveat', 'Srisakdi', serif;
+        background-color: #fff;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .desktop {
+        visibility: hidden;
+      }
+      .mobile {
+        visibility: visible;
+      }
+  </style>
+
+  <script>
+  function myFunction() {
+  var x = document.getElementById("name");
+  var y = document.getElementById("hello");
+  var z = document.getElementById("my");
+  if (x.innerHTML === "Krittin<br>Leewanich") {
+    x.innerHTML = "กฤติน<br>ลีวณิชย์";
+  } else {
+    x.innerHTML = "Krittin<br>Leewanich";
+  }
+  if (y.innerHTML === "HELLO") {
+    y.innerHTML = "หวัดดี";
+  } else {
+    y.innerHTML = "HELLO";
+  }
+  if (z.innerHTML === "My name is") {
+    z.innerHTML = "นี่คือ";
+  } else {
+    z.innerHTML = "My name is";
+  }
+}
+  </script>
+
+</html>
