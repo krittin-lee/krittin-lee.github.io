@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>lonely snowman - to mirando</title>
+    <link rel="shortcut icon" type="image/jpg" href="snowman.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main" id="hide">
+        <h1 id="text">tab me 😡</h1>
+        <h2><a href="javascript:myFunction()">☃︎</a></h2>
+        <div class="links" id="links">
+          <a href="https://twitter.com/krittin_lee"><u>twitter</u></a><br>
+          <a href="https://soundcloud.com/kri_ttt"><u>soundcloud</u></a><br>
+          <a href=mailto:krittin.audi@gmail.com ><u>e-mail? 🚩🚩🚩🚩🚩🚩</u></a><br>
+        </div>
+      </div>
+    </body>
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #eddbab;
+        font-family: 'Playfair Display', serif;
+      }
+      .links {
+        isplay = 'block':
+      }
+      .main {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+      }
+      h1 {
+        margin-bottom: -60px;
+        font-size: 2.3vw;
+      }
+      h2 {
+        font-size: 90px;
+      }
+      .links {
+        display: none;
+        border-radius: 10px;
+        border: 2px solid #000;
+        font-size: 1.6vw;
+      }
+      a {
+        text-decoration: none !important;
+        color:#000;
+      }
+      a:visited {color:#000;}
+      a:hover {color:#ff0000;}
+      a:active {color:#0000ff;}
+      @media screen and (max-width: 805px) {
+        h1 {
+          margin-bottom: -30px;
+          font-size: 5vw;
+        }
+        h2 {
+          font-size: 25vw;
+        }
+        .links {
+          display: none;
+          border-radius: 10px;
+          border: 2px solid #000;
+          font-size: 2.2vw;
+        }
+      }
+    </style>
+
+    <script>
+      function myFunction() {
+      var x = document.getElementById("text");
+      if (x.innerHTML === "tab me 😡") {
+        x.innerHTML = "so you must be mirando huh?";
+      }
+      else if (x.innerHTML === "so you must be mirando huh?") {
+        x.innerHTML = "if you can stop tapping me now, i will grant you 4 wishes";
+      }
+      else if (x.innerHTML === "if you can stop tapping me now, i will grant you 4 wishes") {
+        x.innerHTML = "ok you wishes are pending to be granted, leave now or else";
+      }
+      else if (x.innerHTML === "ok you wishes are pending to be granted, leave now or else") {
+          x.innerHTML = "Oh hi agian mirando, so you tapped me again huh?";
+      }
+      else if (x.innerHTML === "Oh hi agian mirando, so you tapped me again huh?") {
+          x.innerHTML = "you see, i have granted you wishes but because you tapped me AGAIN!!";
+      }
+      else if (x.innerHTML === "you see, i have granted you wishes but because you tapped me AGAIN!!") {
+          x.innerHTML = "so i traveled back in time and undo those yours wishes";
+      }
+      else if (x.innerHTML === "so i traveled back in time and undo those yours wishes") {
+          x.innerHTML = "becase you are so annoying and i'm a precious magical snowman, so...";
+      }
+      else if (x.innerHTML === "becase you are so annoying and i'm a precious magical snowman, so...") {
+          x.innerHTML = "i will leave this realm by my self, you have to know that this is very special thing of me to do to you";
+      }
+      else if (x.innerHTML === "i will leave this realm by my self, you have to know that this is very special thing of me to do to you") {
+          x.innerHTML = "bye, you buffoon!";
+      }
+      else if (x.innerHTML === "bye, you buffoon!") {
+          document.getElementById("hide").style.display = "none";
+      }
+    }
+    </script>
+
+</html>
