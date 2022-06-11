@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+  <head>
+    <meta charset="utf-8">
+    <title>ฝุ่น | fOoN</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+      .column-left {
+        width: 35%;
+        border-radius: 10px;
+        float: left;
+        position: absolute;
+        background-image: url('https://i.ibb.co/ZT88qPw/bg.jpg');
+        background-color: rgba(255,5,255,0.6);
+        background-blend-mode: darken;
+      }
+
+      .column-right {
+        float: right;
+        width: 65%;
+        margin-left: 36%;
+        position: fixed;
+      }
+      .border {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+      }
+      .row {
+        display: flex;
+      }
+
+      body {
+        background-color: black;
+        color:white;
+        }
+      .move {
+        margin-top: -20px;
+      }
+      .move-left {
+        margin-left: -10px;
+      }
+
+/* Buttery-Smooth Marquee 1.2*/
+  .content {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Thasadith', sans-serif;
+  }
+    .marquee {
+      position: relative;
+      width: 100vw;
+      max-width: 100%;
+      height: 55px;
+      overflow-x: hidden;
+    }
+    .track {
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 2s linear infinite;
+      }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    </style>
+
+        <div class="row">
+          <div class="column-left border">
+            <header>
+              <h1 id="changethis" style="text-align: center; font-size:50px; font-family: 'Thasadith', sans-serif; margin-top: 0px; padding-left: 10px;">ฝุ่น fOoN</h1>
+              <hr style="margin-top: -20px;">
+            </header>
+              <div class="marquee">
+                <div class="track">
+                  <div style="font-family: 'Thasadith', sans-serif;" class="content">FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎ FoOn ☂︎</div>
+                </div>
+              </div>
+                  <hr style="margin-top: -20px;">
+                  <div style="height: 100%; margin-left: 1%;  margin-right: 1%;">
+                    <h3 id="changethistoo">สวัสดีฉันคือ FoOn</h3>
+                    <p>ฉันอาศัยอยู่บนถนนธนาลัย ในจังหวัดเชียงราย ฉันนั้นมีความไวต่อฝุ่น และ<a href="https://th.wikipedia.org/wiki/ควัน">ควัน</a>ที่เจือปนอยู่ในอากาศ</p>
+                  </div>
+          </div>
+          <div class="column-right">
+              <img src="http://solarprotocol.net/images/clock.png" alt="image" height="100%" width="100%" padding="0" margin="0">
+          </div>
+        </div>
+
+
+    <script>
+      function auto() {
+        setInterval(function() {
+          var x = document.getElementById("changethis");
+          if (x.innerHTML === "ฝุ่น fOoN") {
+            x.innerHTML = "ฝุ่น FoOn";
+          } else {
+            x.innerHTML = "ฝุ่น fOoN";
+          }
+        }, 250 );
+      }
+      function auto2() {
+        setInterval(function() {
+          var x = document.getElementById("changethistoo");
+          if (x.innerHTML === "สวัสดีฉันคือ fOoN") {
+            x.innerHTML = "สวัสดีฉันคือ FoOn";
+          } else {
+            x.innerHTML = "สวัสดีฉันคือ fOoN";
+          }
+        }, 250 );
+      }
+   </script>
+
+
+
+
+
+</html>
+<script>
+  window.onload = auto();
+  window.onload = auto2();
+</script>
