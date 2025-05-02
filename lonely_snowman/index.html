@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Krittin Leewanich - lonely snowman</title>
+    <link rel="shortcut icon" type="image/jpg" href="snowman.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Krittin Leewanich is a creative technologist and student at Chulalongkorn University and everything else Krittin Leewanich.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="split left">
+      <div class="centered">
+        <h1>Krittin Leewanich</h1>
+      </div>
+    </div>
+    
+    <div class="split right">
+      <div class="centered">
+        <img src="img_avatar.png" alt="Avatar man">
+        <h2>John Doe</h2>
+        <p>Some text here too.</p>
+      </div>
+    </div>
+    </body>
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #bcc9b9;
+        font-family: 'Playfair Display', serif;
+      }
+      .main {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+      }
+      h1 {
+        margin-bottom: -60px;
+        font-size: 2.3vw;
+      }
+      h2 {
+        font-size: 90px;
+      }
+      .links {
+        display: none;
+        border-radius: 10px;
+        border: 2px solid #000;
+        font-size: 1.6vw;
+      }
+      .main_name {
+        display: none;
+      }
+      a {
+        text-decoration: none !important;
+        color:#000;
+      }
+      
+            /* Split the screen in half */
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    /* Control the left side */
+    .left {
+      left: 0;
+      background-color: #111;
+    }
+
+    /* Control the right side */
+    .right {
+      right: 0;
+      background-color: red;
+    }
+
+    /* If you want the content centered horizontally and vertically */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* Style the image inside the centered container, if needed */
+    .centered img {
+      width: 150px;
+      border-radius: 50%;
+    }
+    </style>
+
+</html>
