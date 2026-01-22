@@ -38,7 +38,7 @@
             right: 20px;
             z-index: 1000;
             max-width: 900px;
-            background: white;
+            background: #fcf6e5;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -68,6 +68,28 @@
         
         .error {
             color: #d32f2f;
+        }
+        
+        #hint-text {
+            position: fixed;
+            bottom: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.35);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 400;
+            pointer-events: none;
+            white-space: nowrap;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+        
+        #hint-text.hidden {
+            opacity: 0;
         }
         
         #crosshair {
@@ -108,13 +130,14 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1001;
-            background: white;
-            padding: 15px 40px;
+            background: #fcf6e5;
+            padding: 15px 45px;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
             gap: 12px;
+            white-space: nowrap;
         }
         
         #page-header h1 {
@@ -130,7 +153,7 @@
             height: 28px;
             border-radius: 50%;
             border: 2px solid #666;
-            background: white;
+            background: #fcf6e5;
             color: #666;
             font-size: 16px;
             font-weight: 600;
@@ -171,7 +194,7 @@
         }
         
         .modal-content {
-            background: white;
+            background: #fcf6e5;
             padding: 60px 80px;
             border-radius: 16px;
             max-width: 1000px;
@@ -211,19 +234,21 @@
         
         .modal-text p {
             margin-bottom: 20px;
+            text-indent: 2em;
         }
         
         .modal-signature {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-end;
             justify-content: flex-end;
+            gap: 8px;
             margin-top: 40px;
         }
         
         .modal-signature img {
             max-width: 150px;
             height: auto;
-            margin-right: 15px;
         }
         
         .modal-signature span {
@@ -242,9 +267,15 @@
                 font-size: 16px;
             }
             
+            #hint-text {
+                bottom: 180px;
+                font-size: 12px;
+                padding: 8px 20px;
+            }
+            
             #page-header {
                 top: 20px;
-                padding: 12px 30px;
+                padding: 12px 35px;
                 gap: 10px;
             }
             
@@ -279,7 +310,7 @@
 </head>
 <body>
     <!-- Info Modal -->
-    <div id="info-modal">
+    <div id="info-modal" class="visible">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
             <div class="modal-text">
@@ -289,7 +320,7 @@
                 
                 <p>ความคิดชั่วครู่ของคนแปลกหน้า ณ สถานที่ใดสถานที่หนึ่ง อาจดูเล็กน้อยจนแทบไม่มีน้ำหนัก แต่ความคิดนั้นเคยเกิดขึ้นจริง จากชีวิตของคนจริง ๆ ผ่านการตัดสินใจที่ทั้งใหญ่และเล็ก ผ่านผู้คนรอบตัว ผ่านเหตุการณ์ที่สะสมทับถม และค่อย ๆ ตกผลึกขึ้นเป็นประโยคหนึ่งในความคิด ณ เวลานั้น สถานที่ตรงหน้า แสงเงา เสียงรถ ลมร้อน ความเงียบ หรือความพลุกพล่าน จึงไม่ใช่เพียงแค่ฉากหลัง หากแต่เป็นหนึ่งในแรงกระเพื่อมที่ทำให้ความคิดบางอย่างผุดขึ้นมา และทำให้เราทุกคนมีความทรงจำที่ผูกพันกับโลกกายภาพร่วมกัน</p>
                 
-                <p>เว็บไซต์นี้จึงถูกพัฒนาขึ้นเพื่อสำรวจร่องรอยที่มองไม่เห็นเหล่านั้น และเพื่อย้ำเตือนอย่างอ่อนโยนว่า ภายใต้พื้นที่เดียวกัน ผู้คนรอบตัวเราล้วนมีประสบการณ์เฉพาะบุคคลที่ไม่อาจทดแทนกันได้แม้เราจะร่วมเดินอยู่ในเมืองเดียวกันก็ตาม</p>
+                <p><strong><em>𓂀 มโนสถาน</em></strong> จึงถูกพัฒนาขึ้นเพื่อสำรวจร่องรอยที่มองไม่เห็นเหล่านั้น และเพื่อย้ำเตือนอย่างอ่อนโยนว่า ภายใต้พื้นที่เดียวกัน ผู้คนรอบตัวเราล้วนมีประสบการณ์เฉพาะบุคคลที่ไม่อาจทดแทนกันได้แม้เราจะร่วมเดินอยู่ในเมืองเดียวกันก็ตาม</p>
             </div>
             <div class="modal-signature">
                 <img src="signature.png" alt="Signature">
@@ -302,6 +333,8 @@
         <h1>𓂀 มโนสถาน</h1>
         <div id="info-button" onclick="openModal()">i</div>
     </div>
+    
+    <div id="hint-text">ขยับแผนที่ไปมาเพื่อดูเพิ่มอีก ↔</div>
     
     <div id="map"></div>
     
@@ -704,6 +737,12 @@
         async function updateSentence(lat, lng) {
             const sentenceText = document.getElementById('sentence-text');
             const coordsSpan = document.getElementById('coords');
+            const hintText = document.getElementById('hint-text');
+            
+            // Hide hint while loading
+            if (hintText) {
+                hintText.classList.add('hidden');
+            }
             
             // Update coordinates immediately
             coordsSpan.textContent = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
@@ -723,6 +762,13 @@
                 // Update display
                 sentenceText.textContent = `"${sentence}"`;
                 sentenceText.classList.remove('loading');
+                
+                // Show hint after 1.3 seconds
+                if (hintText) {
+                    setTimeout(() => {
+                        hintText.classList.remove('hidden');
+                    }, 1300);
+                }
             } catch (error) {
                 console.error('Error updating sentence:', error);
                 sentenceText.innerHTML = '<span class="error">เกิดข้อผิดพลาดในการสร้างประโยค</span>';
@@ -736,6 +782,14 @@
         const COOLDOWN = 1600; // 2 seconds
         
         // Handle map movement
+        map.on('movestart', function() {
+            // Hide hint when user starts moving the map
+            const hintText = document.getElementById('hint-text');
+            if (hintText) {
+                hintText.classList.add('hidden');
+            }
+        });
+        
         map.on('moveend', function() {
             const now = Date.now();
             if (now - lastUpdate < COOLDOWN) {
