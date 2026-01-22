@@ -319,7 +319,7 @@
                         const reverseData = await reverseResponse.value.json();
                         
                         // Prioritize actual POI names (building names, shop names, etc.)
-                        const poiClasses = ['building', 'amenity', 'shop', 'tourism', 'historic', 'leisure', 'public_transport'];
+                        const poiClasses = ['building', 'amenity', 'shop', 'tourism', 'historic', 'leisure', 'public_transport', 'waterway'];
                         if (reverseData.name && reverseData.class && poiClasses.includes(reverseData.class)) {
                             // This is a named POI - use its actual name first
                             addName(reverseData.name);
