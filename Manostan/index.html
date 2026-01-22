@@ -32,9 +32,9 @@
             left: 20px;
             right: 20px;
             z-index: 1000;
-            max-width: 700px;
+            max-width: 900px;
             background: white;
-            padding: 25px;
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,11 +42,11 @@
         }
         
         #sentence-text {
-            font-size: 18px;
+            font-size: 25px;
             line-height: 1.8;
             margin-bottom: 12px;
             color: #333;
-            min-height: 60px;
+            min-height: 80px;
         }
         
         #coords-text {
@@ -136,6 +136,16 @@
             "ตึกนี้",
             "เส้น",
             "ย่าน",
+        ];
+        
+        // Loading messages
+        const loadingMessages = [
+            "กำลังเรียกดูความคิดที่คนเคยทิ้งไว้แถวนี้...",
+            "กำลังหาคำความทรงจำที่มีอยู่แถวนี้...",
+            "กำลังสืบหาความคิดที่ผู้คนเคยนึกถึง...",
+            "กำลังนึกถึงเรื่องที่เคยเดินผ่านมา...",
+            "กำลังอ่านความในใจที่ใครเคยทิ้งไว้ตรงนี้...",
+            "กำลังค้นหาความคิดที่ลอยอยู่ในอากาศแถวนี้...",
         ];
         
         // Sentence templates
@@ -379,8 +389,9 @@
             // Update coordinates immediately
             coordsSpan.textContent = `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
             
-            // Show loading state
-            sentenceText.innerHTML = '<span class="loading">กำลังเรียกดูความคิดที่คนเคยทิ้งไวแถวนี้...</span>';
+            // Show loading state with random message
+            const loadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+            sentenceText.innerHTML = `<span class="loading">${loadingMessage}</span>`;
             sentenceText.classList.add('loading');
             
             try {
@@ -391,7 +402,7 @@
                 const sentence = makeSentence(names);
                 
                 // Update display
-                sentenceText.textContent = sentence;
+                sentenceText.textContent = `"${sentence}"`;
                 sentenceText.classList.remove('loading');
             } catch (error) {
                 console.error('Error updating sentence:', error);
