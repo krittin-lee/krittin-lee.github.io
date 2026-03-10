@@ -101,31 +101,12 @@
             element.classList.toggle("active");
         }
         
-        // Collapse all sections on mobile; re-open section for current area
+        // Collapse all sections on mobile.
         document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth <= 768) {
-                var workSection = document.getElementById('sec-works');
-                if (workSection) {
-                    workSection.classList.remove('active');
-                }
-                var currentUrl = window.location.pathname;
-                if (currentUrl.includes('/work/') || currentUrl.includes('/blog/') || currentUrl.includes('/blogs/')) {
-                    document.querySelectorAll('.section').forEach(function(section) {
-                        section.classList.remove('active');
-                    });
-                    if (currentUrl.includes('/work/')) {
-                        var workSectionActive = document.getElementById('sec-works');
-                        if (workSectionActive) {
-                            workSectionActive.classList.add('active');
-                        }
-                    }
-                    if (currentUrl.includes('/blog/') || currentUrl.includes('/blogs/')) {
-                        var blogSection = document.getElementById('sec-blog');
-                        if (blogSection) {
-                            blogSection.classList.add('active');
-                        }
-                    }
-                }
+                document.querySelectorAll('.section').forEach(function(section) {
+                    section.classList.remove('active');
+                });
             }
         });
     </script>
