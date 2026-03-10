@@ -54,4 +54,4 @@ Overall, this project deepened my understanding of applied NLP and reinforced th
 
 ---------------------------------<br>
 
-#### Acess [the paper here ⎘](https://krittin-lee.github.io/ETC/SemEval-2021%20Task%207.pdf
+#### Acess [the paper here ⎘](https://krittin-lee.github.io/ETC/SemEval-2021%20Task%207.pdf)
