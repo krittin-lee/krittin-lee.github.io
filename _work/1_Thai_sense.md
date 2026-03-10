@@ -14,7 +14,7 @@ tool: Python, pre-trained LLM models,
 order: "1"
 ---
 
-#### Acess [the paper here ⎘](https://krittin-lee.github.io/SemEval-2021%20Task%207.pdf)
+#### Acess [the paper here ⎘](https://krittin-lee.github.io/ETC/SemEval-2021%20Task%207.pdf)
 
 This project was developed as part of **SemEval-2021 Task 7: HaHackathon**, focusing on automatic detection and interpretation of humor and offensive content in short texts. The goal was to understand how modern NLP systems handle highly subjective language phenomena such as jokes, sarcasm, and controversial humor.
 
@@ -54,4 +54,4 @@ Overall, this project deepened my understanding of applied NLP and reinforced th
 
 ---------------------------------<br>
 
-#### Acess [the paper here ⎘](https://krittin-lee.github.io/SemEval-2021%20Task%207.pdf)
+#### Acess [the paper here ⎘](https://krittin-lee.github.io/ETC/SemEval-2021%20Task%207.pdf
