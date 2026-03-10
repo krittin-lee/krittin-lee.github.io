@@ -1,10 +1,10 @@
 ---
 layout: work
-title: "Anti-tribulation project"
+title: "Anti-tribulation"
 description: "IoT-based natural disaster early warning system, inspired by natural mechanisms"
 image: "/assets/Anti_tribulation/Anti_tribulation.jpg"
 image_subtitle:
-year: "2019-2021"
+year: "2019-21"
 role: 
 emoji: "🌊"
 month_season:
