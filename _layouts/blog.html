@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="blog-detail">
+    <header class="blog-header">
+        <div class="blog-header-content">
+            {% if page.emoji %}
+            <div class="blog-emoji">{{ page.emoji }}</div>
+            {% endif %}
+            <div class="blog-header-text">
+                <h1>{{ page.title }}</h1>
+                <div class="blog-meta">
+                    {% if page.description and page.description | strip != '' %}<span>{{ page.description }}<br></span>{% endif %}
+                    <span><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% if page.image and page.image | strip != '' %}
+    <span>
+     <img src="{{ page.image }}" class="blog-hero-image">
+    </span>
+    {% endif %}
+    <div class="blog-body">
+        {{ content }}
+    </div>
+</div>

@@ -1,0 +1,169 @@
+---
+layout: default
+---
+
+<div class="work-detail">
+    <button class="toc-hamburger" id="toc-hamburger" aria-controls="work-toc-panel" aria-expanded="false" aria-label="Toggle table of contents">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="toc-panel" id="work-toc-panel" aria-label="Table of contents">
+        <div class="toc-panel-title">Contents</div>
+        <div class="toc-panel-list" id="work-toc-list"></div>
+    </nav>
+
+    <header class="work-header">
+        <div class="work-header-content">
+            {% if page.emoji %}
+            <div class="work-emoji">{{ page.emoji }}</div>
+            {% endif %}
+            <div class="work-header-text">
+                <h1>{{ page.title }}</h1>
+                <div class="work-stats">
+                    <span><strong>Year:</strong> {{ page.year }}{% if page.month_season and page.month_season | strip != '' %} ({{ page.month_season }}){% endif %}</span>
+                    {% if page.role and page.role | strip != '' %}<span><strong>Role:</strong> {{ page.role }}</span>{% endif %}
+                    {% if page.for and page.for | strip != '' %}<span><strong>For:</strong> {{ page.for }}</span>{% endif %}
+                    {% if page.team and page.team | strip != '' %}<span><strong>Team:</strong> {{ page.team }}</span>{% endif %}
+                    {% if page.advisors and page.advisors | strip != '' %}<span><strong>Advisor:</strong> {{ page.advisors }}</span>{% endif %}
+                    {% if page.tool and page.tool | strip != '' %}<span><strong>Tool:</strong> {{ page.tool }}</span>{% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <figure class="work-hero-figure">
+        <img src="{{ page.image }}" class="work-hero-image" alt="{{ page.title }} cover image">
+        {% if page.image_subtitle and page.image_subtitle | strip != '' %}
+        <figcaption class="image-subtitle">{{ page.image_subtitle }}</figcaption>
+        {% endif %}
+    </figure>
+
+    <div class="work-body">
+        {{ content }}
+    </div>
+</div>
+
+<script>
+(function () {
+    var tocButton = document.getElementById('toc-hamburger');
+    var tocPanel = document.getElementById('work-toc-panel');
+    var tocListContainer = document.getElementById('work-toc-list');
+    var workBody = document.querySelector('.work-body');
+
+    if (!tocButton || !tocPanel || !tocListContainer || !workBody) {
+        return;
+    }
+
+    function slugify(text) {
+        return text
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
+    }
+
+    function ensureIdMap() {
+        var headings = workBody.querySelectorAll('h1, h2, h3');
+        var usedIds = {};
+
+        headings.forEach(function (heading) {
+            var text = heading.textContent.trim();
+            var base = heading.id || slugify(text) || 'section';
+            var unique = base;
+            var index = 2;
+
+            while (usedIds[unique] || document.getElementById(unique)) {
+                if (heading.id === unique) {
+                    break;
+                }
+                unique = base + '-' + index;
+                index += 1;
+            }
+
+            heading.id = unique;
+            usedIds[unique] = true;
+        });
+
+        return headings;
+    }
+
+    function appendLink(targetList, heading) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent.trim();
+        a.addEventListener('click', function () {
+            tocPanel.classList.remove('active');
+            tocButton.setAttribute('aria-expanded', 'false');
+        });
+        li.appendChild(a);
+        targetList.appendChild(li);
+        return li;
+    }
+
+    function getOrCreateChildList(li) {
+        var existing = null;
+        for (var i = 0; i < li.children.length; i++) {
+            if (li.children[i].tagName === 'UL') {
+                existing = li.children[i];
+                break;
+            }
+        }
+        if (existing) {
+            return existing;
+        }
+        var list = document.createElement('ul');
+        li.appendChild(list);
+        return list;
+    }
+
+    var headings = ensureIdMap();
+    if (!headings.length) {
+        tocButton.style.display = 'none';
+        tocPanel.style.display = 'none';
+        return;
+    }
+
+    var rootList = document.createElement('ul');
+    var currentLevel1 = null;
+    var currentLevel2 = null;
+
+    headings.forEach(function (heading) {
+        var level = Number(heading.tagName.charAt(1));
+
+        if (level === 1) {
+            currentLevel1 = appendLink(rootList, heading);
+            currentLevel2 = null;
+            return;
+        }
+
+        if (level === 2) {
+            var parentForLevel2 = currentLevel1 ? getOrCreateChildList(currentLevel1) : rootList;
+            currentLevel2 = appendLink(parentForLevel2, heading);
+            return;
+        }
+
+        var parentForLevel3 = currentLevel2
+            ? getOrCreateChildList(currentLevel2)
+            : (currentLevel1 ? getOrCreateChildList(currentLevel1) : rootList);
+        appendLink(parentForLevel3, heading);
+    });
+
+    tocListContainer.appendChild(rootList);
+
+    tocButton.addEventListener('click', function () {
+        var isActive = tocPanel.classList.toggle('active');
+        tocButton.setAttribute('aria-expanded', String(isActive));
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!tocPanel.contains(event.target) && !tocButton.contains(event.target)) {
+            tocPanel.classList.remove('active');
+            tocButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+})();
+</script>

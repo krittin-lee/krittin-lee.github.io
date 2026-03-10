@@ -1,0 +1,14 @@
+title: Krittin Leewanich
+description: "Krittin Leewanich is a creative technologist and student at Chulalongkorn University and everything else about Krittin Leewanich."
+favicon: "/snowman.png"
+baseurl: ""
+url: ""
+
+# This creates the "database" behavior
+collections:
+  work:
+    output: true
+    permalink: /work/:slug/
+  blogs:
+    output: true
+    permalink: /blogs/:slug/
