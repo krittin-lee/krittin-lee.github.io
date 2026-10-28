@@ -1,7 +1,7 @@
 ---
 layout: work
 title: "7 Days to Tea"
-description: "A web-game"
+description: "A gimmicky web game"
 image: "/assets/7daystotea/wide_banner.jpg"
 year: "2026"
 role: "Sound engineer, visual artist"
@@ -48,7 +48,7 @@ The tale unfoldeth across seven days of rising chaos. Gather enough tea leaves, 
 
 ## Game Jam Submission
 
-7 Days to Tea is a submission to GRDC - Speedrun Jam 2026, hosted by the Game Research and Development Club - Chulalongkorn Univeristy**.
+7 Days to Tea is a submission to GRDC - Speedrun Jam 2026, hosted by the Game Research and Development Club - Chulalongkorn Univeristy, in a theme of being "gimmicky". 
 
 <figure>
 	<img src="/assets/7daystotea/farm.png">
