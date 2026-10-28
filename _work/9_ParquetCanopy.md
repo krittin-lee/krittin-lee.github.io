@@ -2,7 +2,7 @@
 layout: work
 title: "★★★ ParquetCanopy"
 description: "Geospatial data integration for forest-risk analysis."
-image: "assets/ParquetCanopy/internship cover.jpg"
+image: "/assets/ParquetCanopy/internship cover.jpg"
 year: "2025"
 role: "Data engineer, back-end develper"
 emoji: "🌳"
@@ -67,3 +67,11 @@ For ParquetCanopy, EUDR provides the wider context for investigating how forest-
 [^1]: Food and Agriculture Organization of the United Nations (FAO). *Global Forest Resources Assessment 2020.* [Read the report](https://www.fao.org/interactive/forest-resources-assessment/2020/en/).
 
 [^2]: European Union. *Regulation (EU) 2023/1115 on deforestation-free products.* [Read the regulation](https://eur-lex.europa.eu/eli/reg/2023/1115/oj).
+
+[^3]: European Commission, Joint Research Centre. *Global Forest Cover 2020 – Data Access.* [Dataset and technical information](https://forobs.jrc.ec.europa.eu/GFC/v4).
+
+[^4]: UNEP-WCMC and IUCN. *World Database on Protected Areas.* [Protected Planet](https://www.protectedplanet.net/).
+
+[^5]: DuckDB documentation. *Reading and Writing Parquet Files.* [Documentation](https://duckdb.org/docs/stable/data/parquet/).
+
+[^6]: Department of Mineral Resources, Thailand. *National Reserved Forest Boundary Layer.* [Geospatial service](https://gisportal.dmr.go.th/arcgis/rest/services/Data_Production/DB2_NATIONAL_FOREST/MapServer/0).
