@@ -15,18 +15,16 @@ order: "7"
 ---
 # 7 Days to Tea
 
-## **Play the Game:** [7 Days to Tea](https://rujroot.itch.io/7-days-to-tea)
+### **Play the Game:** [7 Days to Tea](https://rujroot.itch.io/7-days-to-tea)
 
-## ✾❃ ♛ ❈֍
-
+*✾❃ ♛ ❈֍*
 *Seven days to steep the kingdom’s tea,*  
 *Hands in soil, no time to flee.*  
 *Creatures crawl where leaves should grow,*  
 *Each one blocks what you must sow.*  
 *Trust the witch, or trust your hand,*  
 *For tea decides the fate of the land.*
-
-## ❈֍ ♛ ✾❃
+*❈֍ ♛ ✾❃*
 
 ## About the Game
 
@@ -50,12 +48,14 @@ The tale unfoldeth across seven days of rising chaos. Gather enough tea leaves, 
 
 7 Days to Tea is a submission to GRDC - Speedrun Jam 2026, hosted by the Game Research and Development Club - Chulalongkorn Univeristy, in a theme of being "gimmicky". 
 
+**Play the Game:** [7 Days to Tea](https://rujroot.itch.io/7-days-to-tea)
+
 <figure>
 	<img src="/assets/7daystotea/farm.png">
 </figure>
 <figure>
-	<img src="/assets/7daystotea/party.png">
+	<img src="/assets/7daystotea/party.jpg">
 </figure>
 <figure>
-	<img src="/assets/7daystotea/princess.png">
+	<img src="/assets/7daystotea/princess.jpg">
 </figure>
