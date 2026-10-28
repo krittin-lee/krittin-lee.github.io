@@ -119,7 +119,7 @@ Overall, the findings demonstrate that detecting an object does not necessarily 
 	<figcaption class="image-subtitle">Vitualiszation of matching observed and predicted trajectories</figcaption>
 </figure>
 
-## 8. The Reality Check: A Model Cannot Repair Missing Evidence
+## 8. A Model Cannot Repair Missing Evidence
 
 The six test cases reveal a system whose results depend on the entire observation chain, not just the performance of its segmentation model.
 
@@ -137,7 +137,7 @@ Fourth, telescope metadata must reflect the observation that actually occurred. 
 
 These are not problems that can be solved by adding another layer to a neural network. Some require better instrumentation, more complete metadata, more historical orbital information, or a larger and more diverse observation dataset. The system is therefore best understood as a research prototype for optical satellite identification, rather than a fully operational space-surveillance platform.
 
-## 9. The Concept: Connect Measurements, Not Just Algorithms
+## 9. Connect Measurements, Not Just Algorithms
 
 The central idea behind this project is to connect computer vision with a physical model of the world. The image-processing stage identifies a possible trail. Geometric analysis reconstructs its direction and extent. WCS maps image coordinates to the sky. Orbital calculations estimate which satellites should have passed through that region. The final comparison evaluates whether the predicted and observed paths agree.
 
