@@ -31,7 +31,7 @@ The difficult part is not putting these datasets on the same screen. It is makin
 ## The Problem Is Not a Lack of Maps
 
 <figure>
-	<img src="assets/ParquetCanopy/different formats.jpg" alt="Data in different formats">
+	<img src="/assets/ParquetCanopy/different_formats.jpg" alt="Data in different formats">
 </figure>
 
 Deforestation is a physical process, but identifying and documenting it requires information from several different systems. The Food and Agriculture Organization of the United Nations estimated that approximately 10 million hectares of forest were deforested annually between 2015 and 2020.[^1] Understanding where forest loss occurs, and how it relates to agricultural production and land-use restrictions, requires more than a single representation of the landscape.
@@ -45,7 +45,7 @@ The resulting challenge is one of geographical interoperability: determining how
 ## EUDR: From Commodity Supply Chains to Geographical Evidence
 
 <figure>
-	<img src="assets/ParquetCanopy/EUDR.jpg" alt="Data in different formats">
+	<img src="/assets/ParquetCanopy/EUDR.jpg" alt="Data in different formats">
 </figure>
 
 The European Union Deforestation Regulation, formally Regulation (EU) 2023/1115, addresses the relationship between commodity supply chains and deforestation. It covers cattle, cocoa, coffee, oil palm, rubber, soy, and wood, together with specified products derived from them.[^2]
