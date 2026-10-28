@@ -11,7 +11,7 @@ for: "Introduction To Data Warehouse And Data Mining course"
 team: "Naphat Pattanapaisarnwong, Siwadol Rungmart, Chidapha Phongkhahabodi, Kuntida Kongkad, Tuwanon Kimchiang"
 advisors: "Passaporn Kanchanasri"
 tool: 
-order: "7"  
+order: "6"  
 ---
 
 ## Lorem ipsum 

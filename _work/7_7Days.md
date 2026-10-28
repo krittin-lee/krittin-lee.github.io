@@ -11,7 +11,7 @@ for: "GenAI Hackathon, MITR PHOL Group"
 team: "Ruj Siripanyapong, Natchanonn, supawit65321"
 advisors: 
 tool: 
-order: "8"  
+order: "7"  
 ---
 
 ## Lorem ipsum 

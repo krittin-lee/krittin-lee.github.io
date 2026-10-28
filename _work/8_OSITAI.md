@@ -11,9 +11,8 @@ for: "Senior Project"
 team: "Chidapha Phongkhahabodi"
 advisors: "Rajalida Lipikorn, Wutichai Chongchitmate, Wacharin Wichiramala"
 tool: 
-order: "10"  
+order: "8"  
 ---
-
 
 # OSITAI
 ## Optical Satellite Identification and Tracking System from Astronomical Images Using Feature Extraction and Machine Learning
@@ -229,7 +228,7 @@ The system becomes useful when these components work together and when discrepan
 
 ---
 
-## References and Further Reading
+## References
 
 1. F. Stoppa et al. (2024). "Automated detection of satellite trails in ground-based observations using U-Net and Hough transform." *Astronomy & Astrophysics*, 692, A199.
 
