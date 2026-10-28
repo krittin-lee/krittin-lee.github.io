@@ -2,7 +2,7 @@
 layout: work
 title: "★★★  OSITAI"
 description: "An optical satellite identification and tracking from astronomical images using feature extraction and machine learning program"
-image: "https://placehold.co/1000x600/000/white?text=OSITAI   "
+image: "/assets/OSITAI/OSITAI.png"
 year: "2026"
 role:
 emoji: "🛰️"
