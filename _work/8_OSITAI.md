@@ -106,11 +106,6 @@ TLEs encode orbital parameters in a standardized format. They are commonly used 
 
 Local Thai time is seven hours ahead of UTC, so timestamps must be converted consistently before the orbital calculations are performed. For each candidate satellite, the system calculates its apparent position at the beginning of the observation interval. Candidates outside the image's angular boundaries are discarded. The positions of the remaining candidates are calculated again at the end of the interval to estimate their movement across the sky. The result is a predicted trajectory for each satellite that passes the initial spatial filter.
 
-<figure>
-	<img src="/assets/OSITAI/area.png" alt="area">
-</figure>
-[Image: Predicted satellite trajectories within an astronomical field of view. Source: Project orbital calculations.]
-
 ## 6. Matching Observed and Predicted Trajectories
 
 The experiments evaluated the system using six satellite observation datasets to assess its ability to combine image processing with orbital predictions for satellite identification. Overall, the results demonstrated that the system can detect satellite trails and identify corresponding objects when the observed trajectories align with predicted orbital paths. The most successful results were achieved when the trails were clear and the observation data were accurate and consistent.
@@ -121,6 +116,7 @@ Overall, the findings demonstrate that detecting an object does not necessarily 
 
 <figure>
 	<img src="/assets/OSITAI/Matching Observed and Predicted Trajectories.png" alt="area">
+	<figcaption class="image-subtitle">Vitualiszation of matching observed and predicted trajectories</figcaption>
 </figure>
 
 ## 8. The Reality Check: A Model Cannot Repair Missing Evidence
@@ -131,9 +127,7 @@ The project successfully extracted line structures and calculated their equation
 
 These results should be understood within the limits of the experiment. Six datasets are not enough to establish general performance across every telescope, atmospheric condition, orbital regime, or observation workflow.
 
-There are also several practical constraints.
-
-First, faint or noisy trails can remain incomplete after segmentation. The system may need more suitable observations or improvements in image acquisition to recover them reliably.
+There are also several practical constraints. First, faint or noisy trails can remain incomplete after segmentation. The system may need more suitable observations or improvements in image acquisition to recover them reliably.
 
 Second, the available computing resources limit the amount of footage that can be processed. Analysing more frames could improve the temporal continuity of a trail, although this also increases processing requirements.
 
@@ -141,23 +135,18 @@ Third, satellite identification depends on the quality and temporal relevance of
 
 Fourth, telescope metadata must reflect the observation that actually occurred. Pointing changes, incorrect centre coordinates, inconsistent timestamps, and camera rotation can all distort the relationship between pixels and predicted sky positions.
 
-These are not problems that can be solved by adding another layer to a neural network. Some require better instrumentation, more complete metadata, more historical orbital information, or a larger and more diverse observation dataset.
-
-The system is therefore best understood as a research prototype for optical satellite identification, rather than a fully operational space-surveillance platform.
+These are not problems that can be solved by adding another layer to a neural network. Some require better instrumentation, more complete metadata, more historical orbital information, or a larger and more diverse observation dataset. The system is therefore best understood as a research prototype for optical satellite identification, rather than a fully operational space-surveillance platform.
 
 ## 9. The Concept: Connect Measurements, Not Just Algorithms
 
-The central idea behind this project is to connect computer vision with a physical model of the world.
+The central idea behind this project is to connect computer vision with a physical model of the world. The image-processing stage identifies a possible trail. Geometric analysis reconstructs its direction and extent. WCS maps image coordinates to the sky. Orbital calculations estimate which satellites should have passed through that region. The final comparison evaluates whether the predicted and observed paths agree.
 
-The image-processing stage identifies a possible trail. Geometric analysis reconstructs its direction and extent. WCS maps image coordinates to the sky. Orbital calculations estimate which satellites should have passed through that region. The final comparison evaluates whether the predicted and observed paths agree.
+Each stage contributes evidence, and each stage has its own failure modes. A trail detector can be accurate while the camera metadata is wrong. An orbital model can be internally consistent while relying on outdated TLE data. A candidate can rank highly without the score representing a calibrated probability of identity. The system becomes useful when these components work together and when discrepancies are treated as information rather than concealed by a seemingly precise result. A line is an observation. An orbit is a prediction. Identification begins when the two can be reconciled.
 
-Each stage contributes evidence, and each stage has its own failure modes.
-
-A trail detector can be accurate while the camera metadata is wrong. An orbital model can be internally consistent while relying on outdated TLE data. A candidate can rank highly without the score representing a calibrated probability of identity.
-
-The system becomes useful when these components work together and when discrepancies are treated as information rather than concealed by a seemingly precise result.
-
-**A line is an observation. An orbit is a prediction. Identification begins when the two can be reconciled.**
+<figure>
+	<img src="/assets/OSITAI/animated.gif" alt="Animated trail from continuous frames.">
+	<figcaption class="image-subtitle">Animated trail from continuous frames.</figcaption>
+</figure>
 
 ---
 
