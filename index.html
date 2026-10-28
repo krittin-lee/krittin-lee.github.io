@@ -57,6 +57,7 @@ title: Home
     <div class="project-list">
     {% assign home_works = site.work | sort: 'order' | reverse %}
     {% for project in home_works %}
+        {% if project.display != false %}
         <article class="project-item">
             <a href="{{ project.url }}">
                 <img src="{{ project.image }}" alt="{{ project.title }}" class="project-thumb">
@@ -68,6 +69,7 @@ title: Home
                 <p class="project-excerpt">{{ project.description }}</p>
             </a>
         </article>
+        {% endif %}
     {% endfor %}
     </div>
 </html>

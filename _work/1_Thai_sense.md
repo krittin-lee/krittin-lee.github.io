@@ -12,6 +12,7 @@ team: "Kuntida Kongkad, Chidapha Phongkhahabodi"
 advisors: "Attapol Rutherford"
 tool: Python, pre-trained LLM models,
 order: "1"
+display: true
 ---
 
 #### Acess [the paper here ⎘](https://krittin-lee.github.io/ETC/SemEval-2021%20Task%207.pdf)

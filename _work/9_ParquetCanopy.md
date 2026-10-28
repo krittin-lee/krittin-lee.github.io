@@ -12,6 +12,7 @@ team:
 advisors: "Prasong Patheepphoemphong (CEO), Pongsakorn Udombua (CTO)" 
 tool:   
 order: "9"  
+display: true
 ---
 # ParquetCanopy
 ## Making Different Maps Work Together

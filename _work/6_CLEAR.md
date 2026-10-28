@@ -12,6 +12,7 @@ team: "Naphat Pattanapaisarnwong, Siwadol Rungmart, Chidapha Phongkhahabodi, Kun
 advisors: "Passaporn Kanchanasri"
 tool: 
 order: "6"  
+display: false
 ---
 
 ## Lorem ipsum 

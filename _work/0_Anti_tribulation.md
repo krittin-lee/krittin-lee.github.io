@@ -13,6 +13,7 @@ team: "Supakorn Panya, Ratchanon Insuphan, Weerawit Sanumit"
 advisors: "Chaiwut Mamuangkon, Narin lntarajak, Pran Makarkard"
 tool: IoT, Arduino IDE, ESP32, LoRa, Google Firebase
 order: "0"
+display: true
 ---
 
 **Anti-Tribulation** is an experimental Internet of Things (IoT) disaster early-warning system designed to detect environmental hazards such as **wildfires and flooding** in remote areas. The project explores how distributed sensing, low-power communication, and simple physical detection mechanisms can be combined to provide fast and reliable alerts for communities at risk.

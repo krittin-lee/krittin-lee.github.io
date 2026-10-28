@@ -12,6 +12,7 @@ team: "Chidapha Phongkhahabodi"
 advisors: "Rajalida Lipikorn, Wutichai Chongchitmate, Wacharin Wichiramala"
 tool: 
 order: "8"  
+display: true
 ---
 
 # OSITAI:

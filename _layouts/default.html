@@ -32,6 +32,7 @@
                     <ul class="nav-list work-nav-list">
                     {% assign works = site.work | sort: 'order' | reverse %}
                     {% for work in works %}
+                    {% if work.display != false %}
                     <li class="work-nav-item">
                         {% if page.url == work.url %}
                         <a href="{{ work.url }}" style="font-weight: bold;">{{ work.title }} ({{ work.year }})</a>
@@ -39,6 +40,7 @@
                         <a href="{{ work.url }}">{{ work.title }} ({{ work.year }})</a>
                         {% endif %}
                     </li>
+                    {% endif %}
                     {% endfor %}
                     </ul>
                 </div>

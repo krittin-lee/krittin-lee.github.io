@@ -12,6 +12,7 @@ team:
 advisors: "Rajalida Lipikorn"
 tool: 
 order: "3"
+display: true
 ---
 
 **MorphoSpine** is an image processing project developed as part of an Image Processing course (December 2024). The goal was to design a fully automated system that can read spinal X-ray images, isolate the spine, segment individual vertebrae, and save each vertebra as a separate image file labeled by its anatomical position (e.g., C1, T2, L3), without manual adjustment between images.

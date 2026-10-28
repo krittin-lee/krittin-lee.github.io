@@ -12,6 +12,7 @@ team: "Ruj Siripanyapong, Natchanonn, supawit65321"
 advisors: 
 tool: 
 order: "7"  
+display: true
 ---
 # 7 Days to Tea
 
