@@ -85,27 +85,15 @@ The final representation includes the line's endpoints, its equation, its length
 
 ## 4. The Camera Is a Coordinate System
 
-A line defined in image pixels has no immediate astronomical meaning. To compare it with an orbital prediction, the system must establish where the image lies on the celestial sphere.
+A line defined in image pixels has no immediate astronomical meaning. To compare it with an orbital prediction, the system must establish where the image lies on the celestial sphere. This is the transition from image geometry to astronomical coordinates. The project uses the image's central right ascension (RA) and declination (Dec), its dimensions, and its field of view to construct a World Coordinate System (WCS). RA and Dec describe angular positions in the sky. Pixel coordinates describe positions within the camera sensor. WCS supplies the mathematical relationship between these representations. The implementation uses a tangent-plane projection, identified by the WCS coordinate types `RA---TAN` and `DEC--TAN`, together with the image centre and angular pixel scale.
 
-This is the transition from image geometry to astronomical coordinates.
+The scale can be estimated from the angular width of the field of view divided by the image width. The central pixel becomes the reference point for the transformation, while the camera rotation determines the orientation of the image axes. The four image corners are then converted into sky coordinates to estimate the angular boundaries of the field of view. This establishes the region against which predicted satellite positions can be tested. The transformation depends on the accuracy of the input metadata. If the telescope was pointed somewhere other than the recorded coordinates, the WCS may describe a valid mathematical image of the wrong patch of sky. Coordinates are not incidental metadata. They are part of the measurement.
 
-The project uses the image's central right ascension (RA) and declination (Dec), its dimensions, and its field of view to construct a World Coordinate System (WCS).
+<figure>
+	<img src="/assets/OSITAI/area.png" alt="area">
+</figure>
 
-RA and Dec describe angular positions in the sky. Pixel coordinates describe positions within the camera sensor. WCS supplies the mathematical relationship between these representations.
-
-The implementation uses a tangent-plane projection, identified by the WCS coordinate types `RA---TAN` and `DEC--TAN`, together with the image centre and angular pixel scale.
-
-The scale can be estimated from the angular width of the field of view divided by the image width. The central pixel becomes the reference point for the transformation, while the camera rotation determines the orientation of the image axes.
-
-The four image corners are then converted into sky coordinates to estimate the angular boundaries of the field of view.
-
-This establishes the region against which predicted satellite positions can be tested.
-
-The transformation depends on the accuracy of the input metadata. If the telescope was pointed somewhere other than the recorded coordinates, the WCS may describe a valid mathematical image of the wrong patch of sky.
-
-**Coordinates are not incidental metadata. They are part of the measurement.**
-
-## 05. Reconstructing the Expected Orbit
+## 5. Reconstructing the Expected Orbit
 
 The system needs an independent estimate of which satellites could have crossed the observed field of view.
 
@@ -203,7 +191,7 @@ Time is not merely a label attached to an image. It determines where an orbit mo
 
 [Image: Observed satellite trail compared with the predicted orbital trajectory. Source: Project evaluation outputs.]
 
-## 08. The Reality Check: A Model Cannot Repair Missing Evidence
+## 8. The Reality Check: A Model Cannot Repair Missing Evidence
 
 The six test cases reveal a system whose results depend on the entire observation chain, not just the performance of its segmentation model.
 
@@ -225,7 +213,7 @@ These are not problems that can be solved by adding another layer to a neural ne
 
 The system is therefore best understood as a research prototype for optical satellite identification, rather than a fully operational space-surveillance platform.
 
-## 09. The Concept: Connect Measurements, Not Just Algorithms
+## 9. The Concept: Connect Measurements, Not Just Algorithms
 
 The central idea behind this project is to connect computer vision with a physical model of the world.
 
