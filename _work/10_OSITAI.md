@@ -6,7 +6,7 @@ image: "https://placehold.co/1000x600/000/white?text=OSITAI   "
 year: "2026"
 role:
 emoji: "🛰️"
-month_season: "- current"
+month_season: 
 for: "Senior Project"
 team: "Chidapha Phongkhahabodi"
 advisors: "Rajalida Lipikorn, Wutichai Chongchitmate, Wacharin Wichiramala"
