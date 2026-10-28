@@ -2,7 +2,7 @@
 layout: work
 title: "Grab Beauty/Grab AssistCare"
 description: "A strategic case competition project proposing new Grab super-app services for elderly care and beauty transportation, based on market analysis and platform expansion strategy."
-image: "https://placehold.co/1000x600/00B14F/white?text=Grab+Bla+Bla"
+image: "https://placehold.co/1000x600/00B14F/white?text=Grab"
 year: "2024"
 role: "UX/UI desinger"
 emoji: "🏙️"

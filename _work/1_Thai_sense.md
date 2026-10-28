@@ -2,7 +2,7 @@
 layout: work
 title: "THAI-Sense"
 description: "An NLP project that builds transformer-based models to identify jokes and controversial humor in thai text."
-image: "https://placehold.co/1000x600/9cd2aa/white?text=THAI-Sense"
+image: "/assets/thaisense/banner.jpg"
 year: "2024"
 role: 
 emoji: "🗣️"
