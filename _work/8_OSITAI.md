@@ -1,7 +1,7 @@
 ---
 layout: work
 title: "★★★  OSITAI"
-description: "An optical satellite identification and tracking from astronomical images using feature extraction and machine learning program"
+description: "Optical satellite identification and tracking from astronomical images using feature extraction and machine learning program"
 image: "/assets/OSITAI/OSITAI.png"
 year: "2026"
 role:
@@ -14,7 +14,7 @@ tool:
 order: "8"  
 ---
 
-# OSITAI
+# OSITAI:
 ## Optical Satellite Identification and Tracking System from Astronomical Images Using Feature Extraction and Machine Learning
 
 A satellite crosses a telescope's field of view and leaves a streak across an astronomical image. Finding the streak is only the beginning. Identifying the object requires reconstructing the geometry of the image, the time of observation, the position of the telescope, and the satellite's predicted orbit. An astronomical camera records light. A satellite identification system has to reconstruct the event that produced it.
@@ -94,101 +94,29 @@ The scale can be estimated from the angular width of the field of view divided b
 
 ## 5. Reconstructing the Expected Orbit
 
-The system needs an independent estimate of which satellites could have crossed the observed field of view.
+The system needs an independent estimate of which satellites could have crossed the observed field of view. For this, the project uses Two-Line Element sets (TLEs) obtained from CelesTrak's General Perturbations archive. The historical date is selected to correspond to the observation period, and the active-satellite catalogue is used as the candidate population.
 
-For this, the project uses Two-Line Element sets (TLEs) obtained from CelesTrak's General Perturbations archive. The historical date is selected to correspond to the observation period, and the active-satellite catalogue is used as the candidate population.
-
-TLEs encode orbital parameters in a standardized format. They are commonly used with the Simplified General Perturbations 4 (SGP4) model to calculate satellite positions at particular times.
-
-The project uses the Skyfield library to calculate those positions and transform them into coordinates relative to the observer.
-
-That calculation requires three pieces of information:
+TLEs encode orbital parameters in a standardized format. They are commonly used with the Simplified General Perturbations 4 (SGP4) model to calculate satellite positions at particular times. The project uses the Skyfield library to calculate those positions and transform them into coordinates relative to the observer. That calculation requires three pieces of information:
 
 1. The satellite's orbital data.
 2. The observer's geographical position and elevation, represented using WGS84.
 3. The start and end times of the observation, expressed in Coordinated Universal Time (UTC).
 
-Local Thai time is seven hours ahead of UTC, so timestamps must be converted consistently before the orbital calculations are performed.
-
-For each candidate satellite, the system calculates its apparent position at the beginning of the observation interval. Candidates outside the image's angular boundaries are discarded. The positions of the remaining candidates are calculated again at the end of the interval to estimate their movement across the sky.
-
-The result is a predicted trajectory for each satellite that passes the initial spatial filter.
+Local Thai time is seven hours ahead of UTC, so timestamps must be converted consistently before the orbital calculations are performed. For each candidate satellite, the system calculates its apparent position at the beginning of the observation interval. Candidates outside the image's angular boundaries are discarded. The positions of the remaining candidates are calculated again at the end of the interval to estimate their movement across the sky. The result is a predicted trajectory for each satellite that passes the initial spatial filter.
 
 [Image: Predicted satellite trajectories within an astronomical field of view. Source: Project orbital calculations.]
 
-## 06. Matching Observed and Predicted Trajectories
+## 6. Matching Observed and Predicted Trajectories
 
-At this stage, the project has two representations of motion.
+The experiments evaluated the system using six satellite observation datasets to assess its ability to combine image processing with orbital predictions for satellite identification. Overall, the results demonstrated that the system can detect satellite trails and identify corresponding objects when the observed trajectories align with predicted orbital paths. The most successful results were achieved when the trails were clear and the observation data were accurate and consistent.
 
-The first is extracted from the image: a line equation, endpoints, and a motion vector.
+The experiments also revealed that the system's performance depends heavily on the quality of observation metadata and orbital information. Outdated orbital data can cause discrepancies between observed and predicted trajectories, while incorrect telescope coordinates can lead to misalignment. Similarly, unrecorded changes in telescope pointing can affect the consistency of multi-frame analysis, making it difficult to match detected trails with predicted satellite paths. Differences between observation timestamps and predicted passage times can also prevent correct identification, even when the object has been successfully detected.
 
-The second is calculated from orbital data: a candidate satellite's predicted position at the beginning and end of the observation.
+Overall, the findings demonstrate that detecting an object does not necessarily guarantee its correct identification. Reliable satellite identification requires not only effective image processing but also accurate telescope coordinates, consistent pointing information, synchronized observation times, and up-to-date orbital data. These factors are essential for improving the system's accuracy and reliability in practical applications.
 
-The system compares these representations using differences in line orientation and position, then ranks possible candidates using a score derived from the discrepancies.
-
-A strong match means the observed trail and the calculated trajectory are geometrically consistent under the supplied observation conditions. A weak match can indicate an incorrect candidate, incomplete detection, or an error in the underlying metadata.
-
-The system also records information associated with the candidate, including its name, NORAD identification number, calculated coordinates, distance from the observer, and error statistics.
-
-The objective is not simply to choose the satellite whose trajectory looks closest. It is to determine whether the predicted passage is consistent with the actual observation.
-
-That distinction becomes especially important when the camera coordinates or timestamp are wrong. A correct orbital calculation can appear incorrect when compared against a misplaced or mistimed image.
-
-## 07. What the Experiments Revealed
-
-The report evaluates the system using six observational datasets: NAVSTAR 85, GSAT0208 (Galileo 11), O3B MPOWER F2, Gaofen-13 01, Zhongxing-12, and ONEWEB-0221.
-
-The experiments demonstrate both the usefulness of combining image processing with orbital predictions and the sensitivity of the method to observation metadata.
-
-### NAVSTAR 85 (USA 581)
-
-The system extracted a clear trail and returned NAVSTAR 85 as the sole candidate in its results. The report recorded an angular discrepancy of approximately 12.49 degrees and a project-specific assessment score of 86.1%.
-
-The predicted trajectory nevertheless showed a noticeable offset. The report attributes this to the available TLE data being from March 2026, whereas the observation was recorded in February.
-
-This is an important distinction: the pipeline could identify a plausible candidate, but the agreement between the observed and predicted paths was not exact.
-
-### GSAT0208 (Galileo 11)
-
-This dataset produced a clearer match. The extracted trail was straight and continuous, and GSAT0208 ranked first among the candidates, appearing as the only returned candidate.
-
-The report recorded an angular discrepancy of approximately 0.67 degrees and an assessment score of 99.3%.
-
-The result illustrates how a clean trail and sufficiently consistent observation data can allow the image and orbital model to reinforce one another.
-
-These scores are outputs of the project's evaluation method; they should not be interpreted as independently calibrated probabilities that an identification is correct.
-
-### O3B MPOWER F2 and Gaofen-13 01
-
-In these two cases, the initial predictions did not align correctly with the detected trails.
-
-The investigation identified errors in the recorded central coordinates of the telescope. After the pointing coordinates were adjusted and the calculations repeated, the system could identify the intended satellites.
-
-This is more than a correction to a numerical parameter. It demonstrates that the reliability of a vision-based identification system depends on the integrity of the observation metadata.
-
-Better image segmentation cannot compensate for a camera location that does not correspond to the recorded observation.
-
-### Zhongxing-12
-
-This dataset presented a different difficulty. The telescope changed its pointing during the recording, but the change was not recorded in the available metadata.
-
-The system extracted four distinct objects, yet the predicted trajectories could not be matched to the observation with sufficient clarity. The surrounding sky also contained many potential satellite candidates.
-
-Without the camera's changing pointing information, the image-to-sky transformation no longer described the entire recording consistently.
-
-The case shows why combining masks across frames depends on more than the image-processing algorithm. It also depends on the camera remaining in a consistent coordinate frame, or on its motion being recorded and accounted for.
-
-### ONEWEB-0221
-
-Here, the principal issue was temporal alignment.
-
-The observed trail appeared in frames associated with approximately 19:38, while the orbital calculation placed the expected passage at around 19:40. The predicted and observed timelines did not agree.
-
-The system could therefore detect the object without correctly associating it with the expected satellite passage.
-
-Time is not merely a label attached to an image. It determines where an orbit model predicts that an object should be.
-
-[Image: Observed satellite trail compared with the predicted orbital trajectory. Source: Project evaluation outputs.]
+<figure>
+	<img src="/assets/OSITAI/Matching Observed and Predicted Trajectories.png" alt="area">
+</figure>
 
 ## 8. The Reality Check: A Model Cannot Repair Missing Evidence
 
