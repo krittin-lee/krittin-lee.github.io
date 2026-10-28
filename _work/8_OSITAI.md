@@ -1,6 +1,6 @@
 ---
 layout: work
-title: "★★★  OSITAI"
+title: "OSITAI"
 description: "Optical satellite identification and tracking from astronomical images using feature extraction and machine learning program"
 image: "/assets/OSITAI/OSITAI.png"
 year: "2026"
@@ -16,6 +16,8 @@ order: "8"
 
 # OSITAI:
 ## Optical Satellite Identification and Tracking System from Astronomical Images Using Feature Extraction and Machine Learning
+
+#### [Acess the paper (in Thai)](https://example.com)
 
 A satellite crosses a telescope's field of view and leaves a streak across an astronomical image. Finding the streak is only the beginning. Identifying the object requires reconstructing the geometry of the image, the time of observation, the position of the telescope, and the satellite's predicted orbit. An astronomical camera records light. A satellite identification system has to reconstruct the event that produced it.
 

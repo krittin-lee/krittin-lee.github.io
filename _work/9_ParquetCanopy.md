@@ -1,6 +1,6 @@
 ---
 layout: work
-title: "★★★ ParquetCanopy"
+title: "ParquetCanopy"
 description: "Geospatial data integration for forest-risk analysis."
 image: "/assets/ParquetCanopy/internship cover.jpg"
 year: "2025"
