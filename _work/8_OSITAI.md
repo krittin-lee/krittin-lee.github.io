@@ -17,7 +17,7 @@ order: "8"
 # OSITAI:
 ## Optical Satellite Identification and Tracking System from Astronomical Images Using Feature Extraction and Machine Learning
 
-#### [Acess the paper (in Thai)](https://example.com)
+#### [Acess the paper (in Thai)](/assets/OSITAI/OSITAI paper.pdf)
 
 A satellite crosses a telescope's field of view and leaves a streak across an astronomical image. Finding the streak is only the beginning. Identifying the object requires reconstructing the geometry of the image, the time of observation, the position of the telescope, and the satellite's predicted orbit. An astronomical camera records light. A satellite identification system has to reconstruct the event that produced it.
 
@@ -106,6 +106,9 @@ TLEs encode orbital parameters in a standardized format. They are commonly used 
 
 Local Thai time is seven hours ahead of UTC, so timestamps must be converted consistently before the orbital calculations are performed. For each candidate satellite, the system calculates its apparent position at the beginning of the observation interval. Candidates outside the image's angular boundaries are discarded. The positions of the remaining candidates are calculated again at the end of the interval to estimate their movement across the sky. The result is a predicted trajectory for each satellite that passes the initial spatial filter.
 
+<figure>
+	<img src="/assets/OSITAI/area.png" alt="area">
+</figure>
 [Image: Predicted satellite trajectories within an astronomical field of view. Source: Project orbital calculations.]
 
 ## 6. Matching Observed and Predicted Trajectories
