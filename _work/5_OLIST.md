@@ -12,7 +12,7 @@ team: "Kuntida Kongkad, Naphat Pattanapaisarnwong"
 advisors: "Arthorn Luangsodsai"
 tool: "MongoDB Atlas, Tailwind CSS"
 order: "5"  
-display: true
+display: false
 ---
 
 ## Lorem ipsum 

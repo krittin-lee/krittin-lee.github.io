@@ -12,7 +12,7 @@ team: "Kuntida Kongkad, Ruj Siripanyapong, Poonyapat Jankrajang"
 advisors: 
 tool: 
 order: "4"  
-display: true
+display: false
 ---
 
 ## Lorem ipsum 
