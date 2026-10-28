@@ -2,7 +2,7 @@
 layout: work
 title: "7 Days to Tea"
 description: "A web-game"
-image: "https://placehold.co/1000x600/40304a/white?text=7+Days+to+Tea"
+image: "/assets/7daystotea/wide_banner.jpg"
 year: "2026"
 role: "Sound engineer, visual artist"
 emoji: "🍵"
@@ -13,8 +13,49 @@ advisors:
 tool: 
 order: "7"  
 ---
+# 7 Days to Tea
 
-## Lorem ipsum 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget orci id ante luctus commodo vel sed nisl. Cras eu euismod mi, eget ullamcorper dolor. Praesent ex nisi, porttitor commodo metus id, congue volutpat libero. Vivamus mattis tortor nunc, at lacinia leo rhoncus nec. Duis lobortis, lectus egestas interdum volutpat, nisi nibh tristique ex, sit amet volutpat purus dui quis erat. Pellentesque placerat gravida augue, nec elementum est efficitur non. Integer id bibendum lacus, ut egestas ligula. Aliquam id nunc dolor. Nulla rhoncus enim dolor, nec blandit nunc bibendum et. Nam ut orci aliquam ipsum tempus ullamcorper. Suspendisse condimentum ligula nisi, ac semper diam faucibus sed. Suspendisse sit amet aliquet mi. In hac habitasse platea dictumst. Sed fringilla magna justo, nec auctor diam viverra in. Nam condimentum sapien ornare tempor rhoncus.
+## **Play the Game:** [7 Days to Tea](https://rujroot.itch.io/7-days-to-tea)
 
-Suspendisse fermentum dictum lacus, ut elementum leo finibus vel. Duis vel ex placerat, gravida tortor et, tempus nisi. Sed non ex rhoncus, consequat odio rutrum, pulvinar magna. In hac habitasse platea dictumst. Praesent ex ipsum, cursus ut est nec, ornare faucibus mauris. Nulla facilisi. Maecenas placerat ex id augue dapibus condimentum in sollicitudin leo. Morbi nulla nunc, efficitur quis condimentum vitae, dapibus ac diam. Donec in tellus suscipit, tempus nulla quis, interdum lacus. Praesent pellentesque tellus ut dignissim lobortis. Fusce mauris felis, sagittis vitae euismod et, imperdiet nec turpis. Etiam sodales ultricies nibh, sed pretium libero elementum ac. Nulla quam odio, euismod in justo non, accumsan auctor nulla.
+## ✾❃ ♛ ❈֍
+
+*Seven days to steep the kingdom’s tea,*  
+*Hands in soil, no time to flee.*  
+*Creatures crawl where leaves should grow,*  
+*Each one blocks what you must sow.*  
+*Trust the witch, or trust your hand,*  
+*For tea decides the fate of the land.*
+
+## ❈֍ ♛ ✾❃
+
+## About the Game
+
+**7 Days to Tea** is a whimsical management game of care and consequence, where thou playest as a princess tasked with preparing tea for a royal tea party in but seven days. Where false comforts abound, patience is tested, and in the end, the tea revealeth all.
+
+### Gameplay
+
+Each day, thou must tend the palace tea garden by watering and fertilizing its plots. Fail thy daily duties, and coin shall quietly slip from thy purse, for time and care brook no neglect.
+
+Yet the garden knoweth no peace. With each passing day, creatures wander forth and perch upon the tea beds, barring thy hand from its work. Each beast brings its own mischief: some are heavier to move, some blind the eye, and others cling close and slow thy steps. As the days wane, their numbers and nuisance grow.
+
+### The Witch's Wares
+
+When night falleth, the witch Pieren appeareth, bearing wares most curious. Her goods promise aid, yet oft deliver trouble instead. Spend thy hard-earned coin wisely, for not all remedies are as they seem.
+
+### Seven Days to Decide Thy Fate
+
+The tale unfoldeth across seven days of rising chaos. Gather enough tea leaves, and the royal tea party shall prosper. Fail, and the celebration shall be lost, along with thy noble standing.
+
+## Game Jam Submission
+
+7 Days to Tea is a submission to GRDC - Speedrun Jam 2026, hosted by the Game Research and Development Club - Chulalongkorn Univeristy**.
+
+<figure>
+	<img src="/assets/7daystotea/farm.png">
+</figure>
+<figure>
+	<img src="/assets/7daystotea/party.png">
+</figure>
+<figure>
+	<img src="/assets/7daystotea/princess.png">
+</figure>
