@@ -167,7 +167,7 @@ img { max-width: 100%; display: block; }
 .about-photo { width: 250px; height: 250px; object-fit: cover; border: none; box-shadow: none; flex-shrink: 0; }
 .about-text { flex-grow: 1; }
 .about-text p { margin-bottom: 15px; line-height: 1.7; }
-.about-dropcap { float: left; width: 6em; height: 6em; object-fit: cover; margin: 0.15em 0.75em 0.35em 0; }
+.about-dropcap { float: left; width: 5em; height: 5em; object-fit: cover; margin: 0.15em 0.75em 0.35em 0; }
 .about-text h2 { margin-top: 30px; margin-bottom: 10px; font-size: 1.2em; text-transform: uppercase; letter-spacing: 1px; }
 
 /* SINGLE WORK PAGE */
