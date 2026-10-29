@@ -2,7 +2,7 @@
 layout: work
 title: "มโนสถาน"
 description: "(Manostan) an interactive sonder experience"
-image: 
+image: "/assets/arts/manostan.gif"
 year: "2026"
 role: 
 emoji: "🍂"
