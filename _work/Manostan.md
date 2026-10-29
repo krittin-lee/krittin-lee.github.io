@@ -15,7 +15,7 @@ order: "6"
 display: true
 ---
 
-## [Give a visit](https://krittin-lee.github.io/Manostan/)
+## [Give a visit ⎘](https://krittin-lee.github.io/Manostan/)
 
 𓁹 Sonder is the realization that every person we encounter, even in the briefest passing glance, carries a life as complete and intricate as our own. Each has a story woven from hopes, fears, memories, and dreams, unfolding quietly within a world of their own.
 <br><br>
@@ -27,4 +27,4 @@ The place before us — its light and shadows, the sound of passing cars, the wa
 <br><br>
 𓂀 Manosathan was conceived as a way to explore and reconstruct these invisible traces, and to offer a gentle reminder that, within any shared space, the people around us each inhabit an experience uniquely their own — one that can never be replaced by another, even when we walk the same streets of the same city.
 
-## [Give a visit](https://krittin-lee.github.io/Manostan/)
+## [Give a visit ⎘](https://krittin-lee.github.io/Manostan/)
