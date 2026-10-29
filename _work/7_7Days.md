@@ -11,7 +11,7 @@ for: "GenAI Hackathon, MITR PHOL Group"
 team: "Ruj Siripanyapong, Natchanonn, supawit65321"
 advisors: 
 tool: 
-order: "7"  
+order: "6"  
 display: true
 ---
 # 7 Days to Tea
