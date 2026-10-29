@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Lonely Snowman (2024)"
-description: "An introduction to working with geographic information systems."
+description: "An expermental interactive interface for web links."
 image: 
 emoji: "🗺️"
 date: 2025-12-15
