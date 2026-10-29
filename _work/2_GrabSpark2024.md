@@ -12,7 +12,7 @@ team: "Kuntida Kongkad, Ruj Siripanyapong, Wisarut Wichajarn"
 advisors: 
 tool: 
 order: "2"
-display: true
+display: false
 ---
 ## Grab Spark 2024 — Super App Expansion Strategy ◎
 
