@@ -2,7 +2,7 @@
 layout: blog
 title: "9999 edits"
 description: "— a love letter to OpenSteetMap"
-image: "https://placehold.co/1000x600/e74c3c/white?text=Web+Design"
+image: "/assets/arts/OSM.png"
 emoji: "💚"
 date: 2025-06-29
 order: "3"
