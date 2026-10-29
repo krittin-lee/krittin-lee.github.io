@@ -73,7 +73,7 @@ a warm ache in the center of me that only quiet edits can soothe.<br>
 so i keep going.<br>
 i expand.<br>
 translating tools like josm into thai, writing wiki articles, answering forum posts like i’ve been part of this community forever.<br>
-
+<br>
 and maybe i have.<br>
 maybe this is my hometown, too.<br>
 not the real one, <br>
@@ -81,17 +81,17 @@ but the mapped one. <br>
 the shared one.<br>
 the infinite, <br>
 editable one.<br>
-
+<br>
 and now i’m here.<br>
 thousands of edits later.<br>
 still tracing, still tagging.<br>
 still trying to name things.<br>
 still looking for a way to understand the world a little better.<br>
-
+<br>
 openstreetmap is familiar to me now.<br>
 like an old friend.<br>
 like a ritual.<br>
-
+<br>
 and somewhere along the way i realized —<br>
 i believe in open-source.<br>
 i believe in open-content.<br>
@@ -99,7 +99,7 @@ i believe geographical data is a human right.<br>
 i believe it should be free.<br>
 for everyone.<br>
 forever.<br>
-
+<br>
 and yes —<br>
 i do love openstreetmap <3<br>
 <br>
