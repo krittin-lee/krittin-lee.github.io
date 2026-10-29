@@ -8,22 +8,20 @@
     <meta name="description" content="Krittin Leewanich is a creative technologist and student at Chulalongkorn University and everything else Krittin Leewanich.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="split left">
-      <div class="centered">
-        <h1>Krittin Leewanich</h1>
+    <div class="main">
+        <h1 class="main_name">Krittin Leewanich</h1>
+        <h1 id="text">this lonely snowman needs your tap rn</h1>
+        <h2><a href="javascript:speaking()">☃︎</a></h2>
+        <div class="links" id="links">
+          <a href="https://x.com/krittindi"><u>twitter</u></a><br>
+          <a href=mailto:krittin.audi@gmail.com ><u>e-mail? 🚩🚩🚩🚩🚩🚩</u></a><br>
+          ࿊ ࿊ ࿊ ࿊ ࿊ ࿊ ࿊<br>
+          <a href="https://krittin.work/experimental"><u><i>⚣ Krittin's self refelction ⚣</i></u></a><br>
+        </div>
       </div>
-    </div>
-    
-    <div class="split right">
-      <div class="centered">
-        <img src="img_avatar.png" alt="Avatar man">
-        <h2>John Doe</h2>
-        <p>Some text here too.</p>
-      </div>
-    </div>
     </body>
 
     <style>
@@ -60,44 +58,122 @@
         text-decoration: none !important;
         color:#000;
       }
-      
-            /* Split the screen in half */
-    .split {
-      height: 100%;
-      width: 50%;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      overflow-x: hidden;
-      padding-top: 20px;
-    }
-
-    /* Control the left side */
-    .left {
-      left: 0;
-      background-color: #111;
-    }
-
-    /* Control the right side */
-    .right {
-      right: 0;
-      background-color: red;
-    }
-
-    /* If you want the content centered horizontally and vertically */
-    .centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-
-    /* Style the image inside the centered container, if needed */
-    .centered img {
-      width: 150px;
-      border-radius: 50%;
-    }
+      a:visited {color:#000;}
+      a:hover {color:#ff0000;}
+      a:active {color:#0000ff;}
+      @media screen and (max-width: 805px) {
+        h1 {
+          margin-bottom: -30px;
+          font-size: 5vw;
+        }
+        h2 {
+          font-size: 25vw;
+        }
+        .links {
+          display: none;
+          border-radius: 10px;
+          border: 2px solid #000;
+          font-size: 4.2vw;
+        }
+      }
     </style>
+
+    <script>
+      function speaking() {
+      var x = document.getElementById("text");
+      if (x.innerHTML === "this lonely snowman needs your tap rn") {
+        x.innerHTML = "but surprise! this is the all-knowing snowman";
+      }
+      else if (x.innerHTML === "but surprise! this is the all-knowing snowman") {
+        x.innerHTML = "so you want to know more about Krittin?";
+      }
+      else if (x.innerHTML === "so you want to know more about Krittin?") {
+        x.innerHTML = "well, <i>Krittin Leewanich</i> is a creative technologist and computer science student at Chulalongkorn University";
+      }
+      else if (x.innerHTML === "well, <i>Krittin Leewanich</i> is a creative technologist and computer science student at Chulalongkorn University") {
+          x.innerHTML = "you can call him Krit or Audi, <i>but like what everrr</i>";
+      }
+      else if (x.innerHTML === "you can call him Krit or Audi, <i>but like what everrr</i>") {
+          x.innerHTML = "he lives in Bangkok and likes to drink sparkling water ☔︎";
+      }
+      else if (x.innerHTML === "he lives in Bangkok and likes to drink sparkling water ☔︎") {
+          x.innerHTML = "haha";
+      }
+      else if (x.innerHTML === "haha") {
+          x.innerHTML = "what a douchbag he is";
+      }
+      else if (x.innerHTML === "what a douchbag he is") {
+          x.innerHTML = "oops, sorryyyy i'm not supposed to be judgemental and rude";
+      }
+      else if (x.innerHTML === "oops, sorryyyy i'm not supposed to be judgemental and rude") {
+          x.innerHTML = "he also wants me to tell him his contacts so...";
+      }
+      else if (x.innerHTML === "he also wants me to tell him his contacts so...") {
+          x.innerHTML = "here you go 🙄 why do i even bother 🤦";
+          document.getElementById("links").style.display = 'block';
+      }
+      else if (x.innerHTML === "here you go 🙄 why do i even bother 🤦") {
+          x.innerHTML = "wow, so you didn't click any of his links";
+          document.getElementById("links").style.display = 'none';
+      }
+      else if (x.innerHTML === "wow, so you didn't click any of his links") {
+          x.innerHTML = "well to be frank, i never clicked on those links neither";
+      }
+      else if (x.innerHTML === "well to be frank, i never clicked on those links neither") {
+          x.innerHTML = "he is a very boring and dull person, i must say";
+      }
+      else if (x.innerHTML === "he is a very boring and dull person, i must say") {
+          x.innerHTML = "even me, emotionless, web-based snowman...";
+      }
+      else if (x.innerHTML === "even me, emotionless, web-based snowman...") {
+          x.innerHTML = "has more soul and be billion times more interesting than he smh";
+      }
+      else if (x.innerHTML === "has more soul and be billion times more interesting than he smh") {
+          x.innerHTML = "what everrrrrr 🙄";
+      }
+      else if (x.innerHTML === "what everrrrrr 🙄") {
+          x.innerHTML = "i have to go now";
+      }
+      else if (x.innerHTML === "i have to go now") {
+          x.innerHTML = "byeee";
+      }
+      else if (x.innerHTML === "byeee") {
+          x.innerHTML = "HEY! stop tapping me already";
+      }
+      else if (x.innerHTML === "HEY! stop tapping me already") {
+          x.innerHTML = "BREAK IT OFF! 😡";
+      }
+      else if (x.innerHTML === "BREAK IT OFF! 😡") {
+          x.innerHTML = "good day, sir";
+      }
+      else if (x.innerHTML === "good day, sir") {
+          x.innerHTML = "I SAID Good day, sir";
+      }
+      else if (x.innerHTML === "I SAID Good day, sir") {
+          x.innerHTML = "hey, this is not funny anymore!";
+      }
+      else if (x.innerHTML === "hey, this is not funny anymore!") {
+          x.innerHTML = "stop it";
+      }
+      else if (x.innerHTML === "stop it") {
+          x.innerHTML = "i said stop!!!";
+      }
+      else if (x.innerHTML === "i said stop!!!") {
+          x.innerHTML = "i warned you, stop";
+      }
+      else if (x.innerHTML === "i warned you, stop") {
+          x.innerHTML = "what are you? are you a baby? i'm not a toy 🤬";
+      }
+      else if (x.innerHTML === "what are you? are you a baby? i'm not a toy 🤬") {
+          x.innerHTML = "has anyone ever told you that you are one such obnoxious human being";
+      }
+      else if (x.innerHTML === "has anyone ever told you that you are one such obnoxious human being") {
+          x.innerHTML = "fine! you won, just leave me, get lost, ok?";
+      }
+      else if (x.innerHTML === "fine! you won, just leave me, get lost, ok?") {
+          x.innerHTML = "HEY! stop tapping me already";
+      }
+    }
+    </script>
 
 </html>

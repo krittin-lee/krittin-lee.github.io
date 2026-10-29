@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "9999 edits"
+title: "9999 edits (2025)"
 description: "— a love letter to OpenSteetMap"
 image: "/assets/arts/OSM.png"
 emoji: "💚"
