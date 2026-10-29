@@ -27,6 +27,10 @@ ParquetCanopy is a geospatial data service built with FastAPI, DuckDB, and Parqu
 
 The difficult part is not putting these datasets on the same screen. It is making them meaningfully comparable without losing the information that makes each one useful.
 
+<figure>
+	<img src="/assets/ParquetCanopy/mapview.jpg" alt="Data in different formats">
+</figure>
+
 ---
 
 ## 1.The Problem Is Not a Lack of Maps
