@@ -1,7 +1,7 @@
 ---
 layout: work
-title: "CUPS "
-description: "Chulalongkorn University campus Pedestrian Silumation"
+title: "CUPS (w/ Gama Platform)"
+description: "Chulalongkorn University campus Pedestrian Silumation with Gama Platform"
 image: "/assets/arts/Banner_CUPS.jpeg"
 year: "2026"
 role:
@@ -11,7 +11,7 @@ for:
 team:
 advisors: 
 tool: 
-order: "6"  
+order: "7"  
 display: true
 ---
 # Chulalongkorn University campus Pedestrian Silumation (CUPS)
