@@ -22,7 +22,7 @@ A key foundation of the project is geographic data from **[OpenStreetMap (OSM)](
 
 <figure style="max-width: 560px; width: 50%; margin: 0 auto 20px auto;">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Chulalongkorn_University_Auditorium_High_View.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Chulalongkorn University campus view form above.">
-	<figcaption class="image-subtitle">A view of Chulalongkorn University campus from above. Credit: Tangmo~commonswiki (CC BY-SA 3.0) form<a href="https://commons.wikimedia.org/wiki/File:Chulalongkorn_University_Auditorium_High_View.JPG">Wikimedia Commons</a>.</figcaption>
+	<figcaption class="image-subtitle">A view of Chulalongkorn University campus from above. Credit: Tangmo~commonswiki (CC BY-SA 3.0) form <a href="https://commons.wikimedia.org/wiki/File:Chulalongkorn_University_Auditorium_High_View.JPG">Wikimedia Commons</a>.</figcaption>
 </figure>
 
 Within GAMA, the geographic features are translated into a spatial environment and a graph-based road network through which pedestrian agents can move. The current model experiments with directing agents towards a shared destination, providing a basis for examining how the layout and connectivity of campus pathways influence movement. By bringing together OpenStreetMap data, GIS processing, network modelling, and agent-based simulation, CUPS explores the potential of open geographic data to support the study of everyday human mobility.<br>[See the sourcecode](https://github.com/krittin-lee/Gama-Chula-Testing)
